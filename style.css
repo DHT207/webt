@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 115%;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #212529;
+}
+
+/* Nâng cấp từ Bài 2 lên Bài 3: Ẩn link Skip và chỉ hiện khi :focus */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background-color: #0d47a1;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+header {
+    background-color: #e3f2fd;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    display: inline-block;
+    width: 85%;
+    background-color: #0d47a1;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Giữ lại chú thích thẻ li từ Bài 2 */
+/*
+li {
+    display: inline-block;
+    width: 150px;
+}
+*/
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Yêu cầu Bài 3: Hiệu ứng :hover kèm transition */
+nav a:hover {
+    background-color: #ffca28;
+    color: #000000;
+}
+
+main {
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #0d47a1;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Yêu cầu Bài 3: Tất cả hình ảnh đều dùng Box Model (border, padding, border-radius) */
+img {
+    border: 3px solid #0d47a1;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Kế thừa từ Bài 2: Ảnh trong nav rộng 10% */
+nav img {
+    width: 10%;
+    vertical-align: middle;
+}
+
+/* Kế thừa từ Bài 2 & Bài 3: Lớp .grid 2 cột */
+.grid {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 25px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+/* Kế thừa từ Bài 2 & Bài 3: Lớp .flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Yêu cầu Bài 3: Sử dụng nth-child đổi bo góc cho các ảnh chẵn trong trang flex */
+.flex img:nth-child(even) {
+    border-radius: 50%;
+    border-color: #2e7d32;
+}
+
+footer {
+    background-color: #e3f2fd;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
